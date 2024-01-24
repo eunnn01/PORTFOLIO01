@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
 html,body{
     font-family: 'Noto Sans KR', sans-serif;
-    background-color:white;
-    color:#474747;
+    background-color:rgb(255, 255, 255);
+    color:black;
     font-size:16px;
     margin:0;
     height:100%;
@@ -63,16 +63,19 @@ main{
     position:relative;
     transition:0.5s;
 }
-/* 
-.side-nav a:nth-child(1):after{
-    content: "";
+.side-nav a.side-active{
+    background-color:rgb(162, 175, 230);
 }
-*/
+
+/* .side-nav a:nth-child(1):after{
+    content: "";
+} */
+
 /* 헤더, 콘텐츠, 푸터 */
 header, section, footer{
     width: 100%;
     margin:auto;
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 header{
     width: 100%;
@@ -148,19 +151,21 @@ section{
 .nav-list a.clickActive{
     background-color: skyblue;
 } */
-
 #cover{
     width: 100%;
-    /* background: ; */
+    color: white;
+    background: url(../images/background.jpg);
+    background-size: cover;
 }
 .cover-title{
     width:100%;
     height:50%;
     font-size: 3rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     padding-left: 80px;
+    
 }
 .cover-title:after{
     content: "";
@@ -168,7 +173,7 @@ section{
     top:30%;
     left: 25%;
     width: 60%;
-    border: 5px solid rgb(16, 61, 145);
+    border: 5px solid rgb(233, 201, 220);
 }
 .cover-container{
     width: 100%;
@@ -181,7 +186,7 @@ section{
 .cover-box{
     width: 200px;
     height: 200px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,25 +198,21 @@ section{
 }
 .section-title{
     width: 100%;
-    height: 10%;
+    height: 15%;
     font-size: 2.5rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 #about{
     width: 100%;
 }
-
 .about-container{
     width: 100%;
     height: 90%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     /* border: 1px solid black; */
 }
 .about-box{
-    width: 70%;
-    height: 80%;
+    width: 100%;
     /* border: 1px solid black; */
     padding: 15px;
     margin: auto;
@@ -240,7 +241,7 @@ section{
     list-style-type: none;
 }
 #web{
-
+    width: 100%;
 }
 .web-container{
     width: 80%;
@@ -255,8 +256,13 @@ section{
 .web-img{
     width: 100%;
     height: 55%;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid black;
+}
+.web-img img{
+    width: 100%;
 }
 .web-info{
     width: 100%;
@@ -264,53 +270,108 @@ section{
     padding: 10px;
     border: 1px solid black;
 }
+#banner{
+    width: 100%;
+}
+.banner-container{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+.banner-box{
+    width: 85%;
+    height: 20%;
+    border: 1px solid black;
+    background-color: white;
+    margin: auto;
+}
+.banner-box img{
+    width: 100%;
+    height: 100%;
+}
+#detail{
+    width: 100%;
+}
+.detail-container{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    overflow: auto;
+}
+.detail-box{
+    width: 70%;
+    height: 70%;
+    border: 1px solid black;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+.detail-box::-webkit-scrollbar{
+    display:none;
+  }
+.detail-box img{
+    width: 100%;
+}
+#icon{
+    width: 100%;
+}
+.icon-logo-container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+.icon-box{
+    width: 40%;
+    height: 20%;
+    margin: auto;
+    border: 1px solid black;
+}
+.logo-box{
+    width: 40%;
+    margin: auto;
+    border: 1px solid black;
+}
+.logo-box img{
+    width: 100%;
+}
+#skill{
+    width: 100%;
+}
+.skill-container{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+.skill-box{
+    width:40%;
+    display:flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
 #ep{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    background: url(../images/background.jpg);
+    background-size: cover;
 }
 .ep-title{
     font-size: 3.5rem;
 }
 
-/* 
-.section-title{
-    margin-top: 12px;
-    padding: 10px;
-    border: 1px solid black;
 
-}
-
-.web-container,
-.banner-container,
-.detail-container,
-.icon-container,
-.skill-container{
-    width: 100%;
-    height: 80%;
-    border: 1px solid black;
-}
-.banner-container{
-    display: flex;
-}
-.banner-box{
-    width: 50%;
-    border: 1px solid black;
-}
-.detail-container{
-    display: flex;
-}
-.detail-box{
-    width: 50%;
-    border: 1px solid black;
-}
-.icon-container{
-    display: flex;
-}
-.icon-box{
-    width: 50%;
-    border: 1px solid black;
-} */
 @media screen and (min-width:450px){
     
 }
@@ -345,15 +406,16 @@ section{
         height: 300px;
     }
     .about-box{
-        width: 30%; 
+        width: 100%; 
+        display: flex;
     }
     .about-img{
-        width: 55%;
-        height: 37%;
-        border: 1px solid black;
-        margin: auto;
+        width: 30%;
         padding: 15px;
         background-color: #d0ddeb;
+    }
+    .about-profile{
+        width: 50%;
     }
     .web-container{
         width: 70%;
@@ -370,6 +432,22 @@ section{
     .web-info{
         width: 40%;
         height: 80%;
+    }
+    .banner-box{
+        width: 45%;
+        height: 30%;
+    }
+    .detail-box{
+        width: 20%;
+        height: 70%;
+    }
+    .icon-box {
+        width: 21%;
+        height: 35%;    
+    }
+    .logo-box{
+        width: 21%;
+        height: 35%;    
     }
 }
 
